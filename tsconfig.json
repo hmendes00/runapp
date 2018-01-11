@@ -12,6 +12,7 @@
       "node_modules/@types"
     ],
     "types": [
+      "node",
       "firebase"
     ],
     "lib": [
