@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">From</div>
+                    <div class="panel-body">
+                        <div class="row inline">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Hour</label>
+                                    <select [(ngModel)]="fromHours" class="form-control">
+                                        <option [ngValue]="item * i" *ngFor="let item of maxHours; let i = index">{{ item * i }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Minutes</label>
+                                    <select [(ngModel)]="fromMinutes" class="form-control">
+                                        <option [ngValue]="item * i" *ngFor="let item of maxMinutes; let i = index">{{ item * i }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">To</div>
+                    <div class="panel-body">
+                        <div class="row inline">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Hour</label>
+                                    <select [(ngModel)]="toHours" class="form-control">
+                                        <option [ngValue]="item * i" *ngFor="let item of maxHours; let i = index">{{ item * i }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Minutes</label>
+                                    <select [(ngModel)]="toMinutes" class="form-control">
+                                        <option [ngValue]="item * i" *ngFor="let item of maxMinutes; let i = index">{{ item * i }}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button (click)="checkWeather()" class="btn btn-info">Check Weather</button>
+                <span [class]="infoMsgColor">{{infoMsg}}</span>
+        </div>
+    </div>
+</div>
